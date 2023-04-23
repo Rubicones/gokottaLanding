@@ -1,0 +1,215 @@
+body{
+    --main-green-dark: #283618;
+    --main-green-light: #425330;
+    --main-light: #FEFAE0;
+    background-color: var(--main-green-dark);
+    color: var(--main-light);
+    font-family: 'Cascadia Code', sans-serif;
+    margin: 0;
+}
+
+.scroll-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+.header_container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-items{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-btn{
+    width: 13vw;
+    height: 4.5vw;
+    border: 0;
+    background-color: var(--main-light);
+    border-radius: 2vw;
+    font-size: 2vw;
+    z-index: 20;
+    animation: 5s ease-out 0s 1 fromBlindLogo;
+
+
+}
+
+.header-logo{
+    width: 100%;
+    margin-bottom: 2vh;
+    transform: translateY(-5vh);
+    z-index: 20;
+    animation: 4s ease-out 0s 1 fromBlindLogo;
+}
+
+.transparent-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    background-color: #283618b1;
+    animation: 2s ease-out 0s 1 fromBlind;
+}
+
+.header-photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    object-fit: cover;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu-section{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-light);
+    scroll-snap-align: start;
+}
+
+.logo-beans{
+    position: absolute;
+    top: 117vh;
+    right: 10vw;
+    width: 15vw;
+    height: 50vh;
+    opacity: 0.5;
+    z-index: 10;
+}
+
+hr {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: var(--main-green-dark);
+    height: 1.5em;
+    opacity: 1;
+    transform: translateY(8vh);
+}
+hr:before {
+    content: '';
+    background-color: var(--main-green-dark);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 0.7vh;
+    opacity: 1;
+}
+hr:after {
+    font-family: 'Source Code Pro', monospace;
+    width: 20vw;
+    text-align: center;
+    content: attr(data-content);
+    position: relative;
+    font-size: 5vw;
+    opacity: 1;
+    transform: translate(15vw, 1vh);
+    display: inline-block;
+    color: var(--main-green-dark);
+    background-color: var(--main-light);
+}
+
+.menu-section .container{
+    position: relative;
+    display: flex;
+    transform: translateY(8vh);
+    margin-top: 15vh;
+    justify-content: space-around;
+    z-index: 20;
+
+}
+
+.about_us{
+    width: 40%;
+    height: 70vh;
+    color: var(--main-green-dark)
+}
+
+.carousel{
+    width: 40%;
+    z-index: 20;
+}
+
+.carousel img{
+    width: 100%;
+    object-fit: contain;
+}
+
+@keyframes fromBlind{
+    0%{
+        background-color: #283618;
+    }
+    100%{
+        background-color: #283618b1;
+    }
+}
+
+@keyframes fromBlindLogo{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+@media only screen and (max-width: 1400px) {
+    .menu-section .container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    hr{
+        text-align: center;
+    }
+
+    hr::after{
+        transform: translateY(1vh);
+    }
+
+    .menu-section .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+    }
+
+    .carousel{
+        width: 50%;
+    }
+
+    .about_us{
+        width: 70%;
+        height: auto;
+        margin-bottom: 5vh;
+    }
+
+
+}
