@@ -1,0 +1,83 @@
+.toggle-switch-container{
+    margin-top: 1vw;
+    display: flex;
+    justify-content: center;
+}
+
+.tri-state-toggle input {
+    width: 8.3vw;
+    height: 4vw;
+    appearance: none;
+    background-color: #283618;
+    opacity: 0;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.tri-state-toggle input:hover {
+    cursor: pointer;
+}
+
+.tri-state-toggle {
+    position: relative;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    border: 0.3vw solid #283618;
+    margin-left: 7.5vw;
+    border-radius: 1vw;
+}
+
+#one{
+    border-radius: 0;
+    border-top-left-radius: 0.3vw;
+    border-bottom-left-radius: 0.3vw;
+    border-right: 0.3vw solid #283618;
+}
+
+
+#two{
+    border-radius: 0;
+}
+
+#three{
+    border-radius: 0;
+    border-top-right-radius: 0.3vw;
+    border-bottom-right-radius: 0.3vw;
+}
+
+.input-value{
+    display: inline;
+    position: absolute;
+    font-family: 'Cascadia Code', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.7vw;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: 0.025em;
+    color: #283618 ;
+    pointer-events: none;
+}
+
+#coffee{
+    top: 1.2vw;
+    left: 2vw;
+}
+
+#not-coffee{
+    top: 0.1vw;
+    left: 10vw;
+}
+
+#food{
+    top: 1.2vw;
+    left: 19vw;
+}
+
+@media only screen and (max-width: 1400px) {
+    .tri-state-toggle {
+        margin: 0;
+        width: 50vw;
+    }
+}

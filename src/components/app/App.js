@@ -4,11 +4,14 @@ import transpBackground from '../../img/transpBackground.svg'
 import headerPhoto from '../../img/headerPhoto.png'
 import lightLogoBeans from '../../img/lightLogoBeans.svg'
 import cphoto1 from '../../img/carouselPhotos/cphoto1.png'
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import Switcher from "../switcher/Switcher";
 
 function App() {
 
   const menuSectionRef = useRef(null)
+  const [switcher, setSwitcher] = useState("2")
+
   
   const scrollToMenu = () => {
         menuSectionRef.current.scrollIntoView({ behavior: 'smooth' });  
@@ -27,10 +30,10 @@ function App() {
             </div>
           </div>
         </header>
-      <section className="menu-section">
+      <section className="screen">
         <img src={lightLogoBeans} className="logo-beans" alt=''/>
         <hr data-content="О нас"></hr>
-        <div className="container">
+        <div className="containerScreen">
           <span className="about_us">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quae consequatur incidunt laborum minus velit, nisi temporibus atque! Tenetur consectetur reiciendis quibusdam minima cum accusantium. Omnis quidem recusandae quos expedita.
             Suscipit ipsum, aperiam qui animi quas laborum, provident asperiores deleniti cupiditate, obcaecati voluptates explicabo adipisci sit. Placeat odit numquam tempora quos aperiam et quasi ad, voluptatem odio doloribus, magnam fugiat?
@@ -42,11 +45,16 @@ function App() {
         </div>
       </section>
 
-      <section className="menu-section" ref={menuSectionRef}>
+      {/* <section className="screen" ref={menuSectionRef}>
         <img src={lightLogoBeans} className="logo-beans" alt=''/>
         <hr data-content="Meню" ></hr>
+        <div className="containerScreen">
+          <div className="switcherCont">
+            <Switcher onSwitch={(state) => setSwitcher(state)}/>
+          </div>
+        </div>
 
-      </section>
+      </section> */}
     </div>
       
     </>
