@@ -12,7 +12,7 @@ body{
     position: relative;
     width: 100%;
     height: 100vh;
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     overflow: auto;
     scroll-snap-type: y mandatory;
 }
@@ -47,8 +47,7 @@ header{
     font-size: 2vw;
     z-index: 20;
     animation: 5s ease-out 0s 1 fromBlindLogo;
-
-
+    color: var(--main-green-dark)
 }
 
 .header-logo{
@@ -81,6 +80,18 @@ header{
     width: 100vw;
     height: 100vh;
 }
+
+/* .about-us{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-light);
+    scroll-snap-align: start;
+    background-image:
+    linear-gradient(180deg, rgba(0,19,242,1) 0%, rgba(40,54,24,0.7973783263305322) 0%, rgba(255,255,255,0) 100%),
+    url('../../img/carouselPhotos/cphotoNR.png');
+    background-size: cover;
+} */
 
 .screen{
     position: relative;
@@ -123,12 +134,12 @@ hr:before {
 }
 hr:after {
     font-family: 'Source Code Pro', monospace;
+    font-size: 5vw;
     width: 20vw;
     height: 5vh;
     text-align: center;
     content: attr(data-content);
     position: relative;
-    font-size: 5vw;
     opacity: 1;
     transform: translate(15vw, 1vh);
     display: inline-block;
@@ -143,9 +154,7 @@ hr:after {
     margin-top: 15vh;
     justify-content: space-around;
     z-index: 20;
-
 }
-
 .about_us{
     width: 40%;
     height: 70vh;
@@ -163,9 +172,22 @@ hr:after {
     object-fit: contain;
 }
 
+h2{
+    font-size: 5vw;
+    margin-left: 7%;
+    padding-top: 4%;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 5vw;
+
+}
+
+
+
 .switcherCont{
     width: 100%;
 }
+
+
 
 @keyframes fromBlind{
     0%{
@@ -191,6 +213,10 @@ hr:after {
     .screen .containerScreen{
         flex-direction: column;
         justify-content: center;
+    }
+
+    .header-items{
+        width: 40%;
     }
 
     hr{
@@ -225,6 +251,7 @@ hr:after {
         flex-direction: row;
         justify-content: center;
     }
+
 
 
 }

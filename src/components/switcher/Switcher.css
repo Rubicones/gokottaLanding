@@ -76,6 +76,10 @@
 }
 
 @media only screen and (max-width: 1400px) {
+    .toggle-switch-container{
+        margin-top: 0;
+    }
+
     .tri-state-toggle {
         margin: 0;
         width: 50vw;
